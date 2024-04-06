@@ -93,17 +93,6 @@ local LibType = "roblox" -- Available ( FiveM or Roblox ) always use small lette
     end
     return tostring(randomString)
   end
-  local function CheckForSpy()
-    local core = game:GetService("CoreGui")
-    local keyword = "spy"
-    for _, v in pairs(core:GetDescendants()) do
-      if v:IsA("TextLabel") or v:IsA("TextButton") or v:IsA("TextBox") then
-        if string.find(string.lower(v.Name), string.lower(keyword)) or string.find(string.lower(v.Text), string.lower(keyword)) then
-            print("Line 102")
-        end
-      end
-    end
-  end
   local function RemoveUI()
     do
       local KeySystem = CoreGui:FindFirstChild('SyncUIxPanda')
